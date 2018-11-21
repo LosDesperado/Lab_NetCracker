@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateHeroTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{heroController.selected.id}" title="#{bundle.CreateHeroTitle_id}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_hname}" for="hname" />
+                    <h:inputText id="hname" value="#{heroController.selected.hname}" title="#{bundle.CreateHeroTitle_hname}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_hname}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_universe}" for="universe" />
+                    <h:inputText id="universe" value="#{heroController.selected.universe}" title="#{bundle.CreateHeroTitle_universe}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_universe}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_power}" for="power" />
+                    <h:inputText id="power" value="#{heroController.selected.power}" title="#{bundle.CreateHeroTitle_power}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_power}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_description}" for="description" />
+                    <h:inputText id="description" value="#{heroController.selected.description}" title="#{bundle.CreateHeroTitle_description}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_description}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_alive}" for="alive" />
+                    <h:inputText id="alive" value="#{heroController.selected.alive}" title="#{bundle.CreateHeroTitle_alive}" required="true" requiredMessage="#{bundle.CreateHeroRequiredMessage_alive}"/>
+                    <h:outputLabel value="#{bundle.CreateHeroLabel_phone}" for="phone" />
+                    <h:inputText id="phone" value="#{heroController.selected.phone}" title="#{bundle.CreateHeroTitle_phone}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{heroController.create}" value="#{bundle.CreateHeroSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{heroController.prepareList}" value="#{bundle.CreateHeroShowAllLink}" immediate="true"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/WEB-INF/web.xml</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jsf/HeroController.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jpa/entities/AbstractFacade.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/hero/Create.xhtml</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jpa/entities/HeroFacade.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jsf/util/PaginationHelper.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jpa/entities/Hero.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/resources/css/jsfcrud.css</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/hero/View.xhtml</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/src/java/jsf/util/JsfUtil.java</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/web/hero/Edit.xhtml</file>
+            <file>file:/D:/1УНИВЕР/КУРСЫ_КРЭКЕР/КУРАТОРУ/lab_1_WEB/Hero_lab/nbproject/build-impl.xml</file>
+        </group>
+    </open-files>
+</project-private>

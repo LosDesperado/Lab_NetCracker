@@ -21,57 +21,75 @@
                     <h:dataTable value="#{heroController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_id}"/>
+                                <h:outputText value="ID"/>
                             </f:facet>
                             <h:outputText value="#{item.id}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_hname}"/>
+                                <h:outputText value="Name"/>
                             </f:facet>
                             <h:outputText value="#{item.hname}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_universe}"/>
+                                <h:outputText value="Universe"/>
                             </f:facet>
                             <h:outputText value="#{item.universe}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_power}"/>
+                                <h:outputText value="Power"/>
                             </f:facet>
                             <h:outputText value="#{item.power}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_description}"/>
+                                <h:outputText value="Description"/>
                             </f:facet>
                             <h:outputText value="#{item.description}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_alive}"/>
+                                <h:outputText value="Alive"/>
                             </f:facet>
                             <h:outputText value="#{item.alive}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListHeroTitle_phone}"/>
+                                <h:outputText value="Phone number"/>
                             </f:facet>
-                            <h:outputText value="#{item.phone}"/>
+                           <h:outputText value="#{item.phone}"/> 
+                           
+                           
+<!-- 
+                              <h:graphicImage name="batman_logo.jpg" width="200" height="100"  library="images"/>
+                          
+                                        -->
                         </h:column>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Actions"/>
                             </f:facet>
-                            <h:commandLink action="#{heroController.prepareView}" value="Hero Info"/>
+                            <h:commandButton style="width: 90px" action="#{heroController.prepareView}" value="Hero Info"/>
                             <h:outputText value="    "/>
                               <br />
-                            <h:commandLink action="#{heroController.prepareEdit}" value="Edit Hero"/>
+                              <h:commandButton style="width: 90px" action="#{heroController.prepareEdit}" value="Edit Hero" />
+                            
                             <h:outputText value="    "/>
                               <br />
-                            <h:commandLink action="#{heroController.destroy}" value="Delete Hero"/>
+                            <h:commandButton  style="width:90px" action="#{heroController.destroy}" value="Delete Hero"  onclick="return confirmDelete();"/>
+                          
+                            <script>
+                               function confirmDelete() {
+				if (confirm("Вы подтверждаете удаление?")) {    
+                            	return true; }
+				else {
+				return false;
+				}
+				}; 
+                            </script>
+                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>

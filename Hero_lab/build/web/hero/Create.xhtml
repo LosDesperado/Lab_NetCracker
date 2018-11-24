@@ -31,10 +31,10 @@
                     <h:inputText id="phone" value="#{heroController.selected.phone}" title="#{bundle.CreateHeroTitle_phone}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{heroController.create}" value="#{bundle.CreateHeroSaveLink}" />
+                <h:commandLink action="#{heroController.create}" value="Create new Hero" />
                 <br />
                 <br />
-                <h:commandLink action="#{heroController.prepareList}" value="#{bundle.CreateHeroShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{heroController.prepareList}" value="Show all Heroes" immediate="true"/>
             </h:form>
         </ui:define>
     </ui:composition>

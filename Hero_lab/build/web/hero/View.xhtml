@@ -15,33 +15,57 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputText value="#{bundle.ViewHeroLabel_id}"/>
-                    <h:outputText value="#{heroController.selected.id}" title="#{bundle.ViewHeroTitle_id}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_hname}"/>
-                    <h:outputText value="#{heroController.selected.hname}" title="#{bundle.ViewHeroTitle_hname}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_universe}"/>
-                    <h:outputText value="#{heroController.selected.universe}" title="#{bundle.ViewHeroTitle_universe}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_power}"/>
-                    <h:outputText value="#{heroController.selected.power}" title="#{bundle.ViewHeroTitle_power}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_description}"/>
-                    <h:outputText value="#{heroController.selected.description}" title="#{bundle.ViewHeroTitle_description}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_alive}"/>
-                    <h:outputText value="#{heroController.selected.alive}" title="#{bundle.ViewHeroTitle_alive}"/>
-                    <h:outputText value="#{bundle.ViewHeroLabel_phone}"/>
-                    <h:outputText value="#{heroController.selected.phone}" title="#{bundle.ViewHeroTitle_phone}"/>
+                    <h:outputText value="ID"/>
+                    <h:outputText value="#{heroController.selected.id}" />
+                    <h:outputText value="Name"/>
+                    <h:outputText value="#{heroController.selected.hname}" />
+                    <h:outputText value="Universe"/>
+                    <h:outputText value="#{heroController.selected.universe}" />
+                    <h:outputText value="Power"/>
+                    <h:outputText value="#{heroController.selected.power}"/>
+                    <h:outputText value="Description"/>
+                    <h:outputText value="#{heroController.selected.description}" />
+                    <h:outputText value="Alive"/>
+                    <h:outputText value="#{heroController.selected.alive}" />
+                    <h:outputText value="Phone"/>
+                    <h:outputText value="#{heroController.selected.phone}" />
+                    <h:outputText value="Logo"/>
+                    <h:outputText value="#{heroController.selected.logo}" />
+                    <br />
+                    <h:graphicImage id="logo_im" value="../javax.faces.resources/images/#{heroController.selected.logo}" width="230" height="150"  library="images" /> 
+                    <script>
+                    document.getElementById("logo_f").addEventListener("change",
+                    function (e) {
+                    document.getElementById("j_idt12:logo").value = this.files[0].name;
+                 
+                     document.getElementById("j_idt12:logo_im").src = "../javax.faces.resources/images/"+ document.getElementById("j_idt12:logo").value;
+                                });
+                    </script>
+                
+                
                 </h:panelGrid>
                 <br />
                 <br />
-                <h:commandLink action="#{heroController.destroyAndView}" value="Delete Hero"/>
+                <h:commandButton style="width: 120px" action="#{heroController.destroyAndView}" onclick="return confirmDelete();" value="Delete Hero" />
+               
+                 <script>
+                               function confirmDelete() {
+				if (confirm("Вы подтверждаете удаление?")) {    
+                            	return true; }
+				else {
+				return false;
+				}
+				}; 
+                            </script>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="Edit Hero"/>
+                <h:button style="width: 120px" outcome="Edit" value="Edit Hero"/>
                 <br />
                 <br />
-                <h:commandLink action="#{heroController.prepareCreate}" value="Create new Hero" />
+                <h:commandButton style="width: 120px" action="#{heroController.prepareCreate}" value="Create new Hero" />
                 <br />
                 <br />
-                <h:commandLink action="#{heroController.prepareList}" value="Show all Heroes"/>
+                <h:commandButton style="width: 120px"  action="#{heroController.prepareList}" value="Show all Heroes"/>
             </h:form>
         </ui:define>
     </ui:composition>

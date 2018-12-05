@@ -59,14 +59,15 @@
                             <f:facet name="header">
                                 <h:outputText value="Phone number"/>
                             </f:facet>
-                           <h:outputText value="#{item.phone}"/> 
-                           
-                           
-<!-- 
-                              <h:graphicImage name="batman_logo.jpg" width="200" height="100"  library="images"/>
-                          
-                                        -->
+                           <h:outputText value="#{item.phone}"/>
                         </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Logo"/>
+                            </f:facet>
+                            <h:graphicImage  name="#{item.logo}" width="230" height="120"  library="images" />
+                        </h:column>
+                        
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Actions"/>
@@ -89,12 +90,21 @@
 				}
 				}; 
                             </script>
-                            
+                        
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{heroController.prepareCreate}" value="Create new Hero"/>
+                <h:commandButton style="width: 120px" action="#{heroController.prepareCreate}" value="Create new Hero" onclick="return confirmCreate();"/>
+                <script>
+                               function confirmCreate() {
+				if (confirm("Вы действительно хотите создать нового героя?")) {    
+                            	return true; }
+				else {
+				return false;
+				}
+				}; 
+                </script>
             </h:form>
         </ui:define>
     </ui:composition>

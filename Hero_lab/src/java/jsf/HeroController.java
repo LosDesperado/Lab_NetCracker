@@ -4,7 +4,8 @@ import jpa.entities.Hero;
 import jsf.util.JsfUtil;
 import jsf.util.PaginationHelper;
 import jpa.entities.HeroFacade;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.io.Serializable;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
@@ -75,6 +76,7 @@ public class HeroController implements Serializable {
 
     public String prepareCreate() {
         current = new Hero();
+        //current.setLogo("batman_logo.jpg");
         selectedItemIndex = -1;
         return "Create";
     }

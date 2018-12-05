@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -66,6 +68,8 @@ public class Hero implements Serializable {
     private Character alive;
     @Column(name = "PHONE")
     private Long phone;
+    @Column(name = "LOGO")
+    private String logo;
 
     public Hero() {
     }
@@ -74,13 +78,14 @@ public class Hero implements Serializable {
         this.id = id;
     }
 
-    public Hero(Long id, String hname, String universe, short power, String description, Character alive) {
+    public Hero(Long id, String hname, String universe, short power, String description, Character alive, String logo) {
         this.id = id;
         this.hname = hname;
         this.universe = universe;
         this.power = power;
         this.description = description;
         this.alive = alive;
+        this.logo=logo;
     }
 
     public Long getId() {
@@ -97,6 +102,15 @@ public class Hero implements Serializable {
 
     public void setHname(String hname) {
         this.hname = hname;
+    }
+    
+     public String getLogo() {
+        // logo=("D:\\1УНИВЕР\\КУРСЫ_КРЭКЕР\\КУРАТОРУ\\Lab_NetCracker\\Hero_lab\\web\\resources\\images\\")+logo;
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = (String)logo;
     }
 
     public String getUniverse() {
